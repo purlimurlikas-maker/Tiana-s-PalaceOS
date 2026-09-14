@@ -75,7 +75,7 @@ nav { text-align: center; }
   padding: 15px;
   position: absolute;
   left: 50%;
-  top: 150px; 
+  top: 140px; 
   transform: translateX(-50%);
   justify-content: space-between;
   overflow-y: auto;
