@@ -1,4 +1,4 @@
-['welcome', 'about', 'TianaSPalaceApp', 'TianaSPalaceAppwindow', 'SettingsAppwindow', 'SettingsApp'].forEach(id => {
+['about', 'TianaSPalaceApp', 'TianaSPalaceAppwindow', 'SettingsAppwindow', 'SettingsApp'].forEach(id => {
   const el = document.getElementById(id);
   if (el) dragElement(el);
 });
@@ -100,6 +100,8 @@ function initializeWindow(id) {
     }
   });
 })();
+
+
 
 (function() {
   const STORAGE_KEY = 'appBackground';
@@ -205,4 +207,42 @@ function initializeWindow(id) {
     initWallpaperThumbs();
   }
 
+})();
+
+(function() {
+  const win = document.getElementById('welcome');
+  const handle = document.getElementById('rayImg');
+  if (!win || !handle) return;
+
+  let dragging = false;
+  let startX = 0, startY = 0;
+  let origLeft = 0, origTop = 0;
+
+  handle.addEventListener('pointerdown', (e) => {
+    e.preventDefault();
+    handle.setPointerCapture(e.pointerId);
+    dragging = true;
+    startX = e.clientX;
+    startY = e.clientY;
+    const rect = win.getBoundingClientRect();
+    
+    origLeft = rect.left;
+    origTop = rect.top;
+    handle.style.cursor = 'grabbing';
+  });
+
+  window.addEventListener('pointermove', (e) => {
+    if (!dragging) return;
+    const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
+    win.style.left = (origLeft + dx) + 'px';
+    win.style.top  = (origTop + dy) + 'px';
+  });
+
+  window.addEventListener('pointerup', (e) => {
+    if (!dragging) return;
+    dragging = false;
+    try { handle.releasePointerCapture(e.pointerId); } catch {}
+    handle.style.cursor = 'grab';
+  });
 })();
