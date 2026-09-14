@@ -12,5 +12,6 @@ Also, to move the Welcome window, you can use the picture of Ray, and drag it ar
 
 Acknowledgements: I got help from people in Hack Club, I used the guide https://jams.hackclub.com/batch/webOS, and when something wasn't working, or I didn't know what to do, I used AI to help me or fix my problems.
 
-
+Ship 2 (to Snowglobe) 
+Edits: I added more recipes to the recipe app, and I fixed the welcome window header, so the window can only be moved by moving Ray.
 
