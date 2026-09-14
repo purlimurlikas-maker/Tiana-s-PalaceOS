@@ -3,7 +3,7 @@ Tiana's PalaceOS is a WebOS made with Princess Tiana in mind, but it also has a 
 
 <img width="1424" height="806" alt="Screenshot 2026-09-05 at 18 28 05" src="https://github.com/user-attachments/assets/9b077bc8-a487-4b8d-a5a6-112bf663bf8c" />
 
-Try the website: https://purlimurlikas-maker.github.io/Purli-s-WebOS/
+Try the website:  https://purlimurlikas-maker.github.io/Tiana-s-PalaceOS/
 
 To use it, just open the link and test the different features.
 
